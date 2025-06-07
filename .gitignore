@@ -1,1 +1,2 @@
 ssh/.ssh/known_hosts
+ssh/.ssh/allowed_signers

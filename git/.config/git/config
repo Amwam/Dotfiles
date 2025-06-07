@@ -1,0 +1,39 @@
+[user]
+    name = Amit Shah
+    email = amit@amwam.me
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIATayPewCYLpkcOma0QCtAsTbn5t3qb7WrXLtiZ0iwKE
+[rerere]
+    enabled = true
+    autoupdate = true
+[color]
+    ui = auto
+    diff = true
+[pull]
+    rebase = true
+
+[init]
+	defaultBranch = main
+[push]
+    default = simple
+[alias]
+    lg = "!. ~/.config/git/helpers/log && pretty_git_log"
+    lga = "!. ~/.config/git/helpers/log && pretty_git_log --all"
+    st = status -sb
+    ci = commit
+    co = checkout
+    br = branch -avv
+    cob = !zsh -c 'git checkout -b $1 $1'
+    oldest-ancestor = !zsh -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+    unmerged = branch -r --no-merged $(git rev-parse --abbrev-ref origin/HEAD) # Show all the branches not merged into master
+    poc = "! git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+    pocf = "! git push -u origin $(git rev-parse --abbrev-ref HEAD) --force-with-lease"
+	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

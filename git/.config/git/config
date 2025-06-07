@@ -10,7 +10,9 @@
     diff = true
 [pull]
     rebase = true
-
+[diff]
+    compactionHeuristic = true
+    colorMoved = true
 [init]
 	defaultBranch = main
 [push]

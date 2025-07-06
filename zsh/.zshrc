@@ -9,6 +9,7 @@ alias glga="g lga"
 alias gbr="git branch -avv"
 alias gb="gbr"
 alias gf="git fetch --all --prune --progress"
+alias gd='git diff'
 alias gdc='git diff --cached'
 
 alias vi='nvim'

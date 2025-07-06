@@ -2,21 +2,54 @@
 name = Amit Shah
 email = amit@amwam.me
 signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIATayPewCYLpkcOma0QCtAsTbn5t3qb7WrXLtiZ0iwKE
+
+[core]
+editor = nvim
+excludesFile = ~/.config/git/ignore
+commitGraph = true
+pager = delta
+
+[interactive]
+diffFilter = delta --color-only
+
+[column]
+ui = auto
+
+[delta]
+navigate = true # use n and N to move between diff sections
+dark = true     # or light = true, or omit for auto-detection
+
+[merge]
+conflictstyle = zdiff3
+
 [rerere]
 enabled = true
 autoupdate = true
+
+[tag]
+sort = version:refname
+
 [color]
 ui = auto
 diff = true
+
 [pull]
 rebase = true
+
 [diff]
 compactionHeuristic = true
 colorMoved = true
+renames = true
+algorithm = histogram
+
 [init]
 defaultBranch = main
+
 [push]
 default = simple
+autoSetupRemote = true
+followTags = true
+
 [alias]
 lg = "!. ~/.config/git/helpers/log.sh && pretty_git_log"
 lga = "!. ~/.config/git/helpers/log.sh && pretty_git_log --all"
@@ -39,3 +72,9 @@ program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [commit]
 gpgsign = true
+
+[help]
+autocorrect = prompt
+
+[branch]
+sort = -committerdate

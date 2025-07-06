@@ -3,8 +3,16 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 
+# git aliases
 alias gst='git status -sb'
 alias g='git'
+# alias glg="g lg"
+# alias glga="g lga"
+alias gbr="git branch -avv"
+alias gb="gbr"
+alias gf="git fetch --all --prune --progress"
+alias gdc='git diff --cached'
+
 
 alias vi='nvim'
 alias vim='nvim'

@@ -22,3 +22,10 @@ if command -v fzf >/dev/null 2>&1; then
 else
   echo "fzf is not installed. Please install fzf to enable this feature."
 fi
+
+if command -v bat >/dev/null 2>&1; then
+  alias cat=bat
+  echo ""
+else
+  echo "bat is not installed. Please install bat to enable this feature."
+fi

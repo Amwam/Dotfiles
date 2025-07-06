@@ -43,3 +43,10 @@ if command -v eza >/dev/null 2>&1; then
 else
     echo "eza (better ls) not installed"
 fi
+
+
+if command -v atuin >/dev/null 2>&1; then
+echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+else
+  echo "atuin not installed for better shell history, skipping setup"
+fi

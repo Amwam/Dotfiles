@@ -33,13 +33,12 @@ fi
 
 if command -v bat >/dev/null 2>&1; then
   alias cat=bat
-  echo ""
 else
   echo "bat (better cat) is not installed. Please install bat to enable this feature."
 fi
 
 
-if command -v exa >/dev/null 2>&1; then
+if command -v eza >/dev/null 2>&1; then
     alias ls=eza
 else
     echo "eza (better ls) not installed"

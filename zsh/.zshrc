@@ -1,7 +1,5 @@
-
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
-
 
 # git aliases
 alias gst='git status -sb'
@@ -13,17 +11,14 @@ alias gb="gbr"
 alias gf="git fetch --all --prune --progress"
 alias gdc='git diff --cached'
 
-
 alias vi='nvim'
 alias vim='nvim'
-
 
 # Case insensitive cd
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 export EDITOR='nvim'
-
 
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
@@ -37,16 +32,14 @@ else
   echo "bat (better cat) is not installed. Please install bat to enable this feature."
 fi
 
-
 if command -v eza >/dev/null 2>&1; then
-    alias ls=eza
+  alias ls=eza
 else
-    echo "eza (better ls) not installed"
+  echo "eza (better ls) not installed"
 fi
 
-
 if command -v atuin >/dev/null 2>&1; then
-echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+  eval "$(atuin init zsh)"
 else
   echo "atuin not installed for better shell history, skipping setup"
 fi

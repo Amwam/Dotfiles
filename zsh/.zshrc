@@ -21,6 +21,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 export EDITOR='nvim'
 
+# Edit in vim mode
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
   source ~/.config/zsh/scripts/fzf/git.zsh

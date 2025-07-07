@@ -23,6 +23,8 @@ export EDITOR='nvim'
 
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
+  source ~/.config/zsh/scripts/fzf/git.zsh
+  source ~/.config/zsh/scripts/fzf/docker.zsh
 else
   echo "fzf is not installed. Please install fzf to enable this feature."
 fi

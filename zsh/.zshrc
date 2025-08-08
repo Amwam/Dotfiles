@@ -46,8 +46,17 @@ else
   echo "eza (better ls) not installed"
 fi
 
+# Share history between sessions
+setopt share_history
 if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
 else
   echo "atuin not installed for better shell history, skipping setup"
+fi
+
+
+if command -v op >/dev/null 2>&1; then
+  source ${HOME}/.config/op/plugins.sh
+else
+  echo "1Password CLI (op) is not installed. Please install it to enable 1Password CLI features."
 fi

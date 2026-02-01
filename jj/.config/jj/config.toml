@@ -1,0 +1,19 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Amit Shah"
+email = "amit@amwam.me"
+
+[gg.ui]
+recent-workspaces = ["/Users/amit/Developer/prototypes/jujutsu-testing"]
+
+
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'
+
+[aliases]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
+rebase-all = ["rebase", "-s", "(::trunk())+ & mutable()", "-o", "trunk()"]
+abandon-empty = ["abandon", "empty() ~ merges() ~ root() & ::@"]
+sync-trunk = ["git", "fetch", "--branch", "'trunk()'"]

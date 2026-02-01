@@ -29,3 +29,4 @@ Temporary Items
 *.iml
 *.pyc
 .vimlocal
+**/.claude/settings.local.json

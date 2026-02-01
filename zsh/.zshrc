@@ -60,3 +60,4 @@ if command -v op >/dev/null 2>&1; then
 else
   echo "1Password CLI (op) is not installed. Please install it to enable 1Password CLI features."
 fi
+

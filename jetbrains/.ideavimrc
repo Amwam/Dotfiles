@@ -15,6 +15,9 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+" Use the system clipboard
+set clipboard+=unnamed
+
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
@@ -41,3 +44,5 @@ set number
 set relativenumber
 
 set visualbell
+
+set gdefault

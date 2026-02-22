@@ -897,6 +897,7 @@ require("lazy").setup({ -- NOTE: Plugins can be added with a link (or for a gith
 			{
 				"L3MON4D3/LuaSnip",
 				version = "2.*",
+				build = "make install_jsregexp",
 				dependencies = {
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:

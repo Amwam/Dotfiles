@@ -61,3 +61,4 @@ else
   echo "1Password CLI (op) is not installed. Please install it to enable 1Password CLI features."
 fi
 
+export PATH="$HOME/.local/bin:$PATH"

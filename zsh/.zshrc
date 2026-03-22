@@ -62,3 +62,10 @@ else
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Ignore tmux focus-event sequences at the shell prompt (prevents bell on pane click)
+bindkey -s '\033[I' ''   # focus-in  → noop
+bindkey -s '\033[O' ''   # focus-out → noop
+
